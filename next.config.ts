@@ -1,7 +1,9 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+// next.config.js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  // Add this line to transpile the 'three' package
+  transpilePackages: ['three'],
 };
 
-export default nextConfig;
+module.exports = nextConfig;

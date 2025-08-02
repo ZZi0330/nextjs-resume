@@ -1,0 +1,22 @@
+
+@font-face {
+  font-family: "Huninn";
+  font-style: normal;
+  font-display: swap;
+  src: url("/project1/fonts/Huninn-Regular.ttf") format("truetype");
+}
+
+
+body {
+    font-family: "Huninn", sans-serif;
+    width: 100%;
+    background-color: black;
+    color: white;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+
+
+
+
