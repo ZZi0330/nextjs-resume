@@ -62,7 +62,7 @@ const ProjectsSection = () => {
                 <ExternalLink size={24} />
               </Link>
               <Link
-                href="#"
+                href="https://github.com/ZZi0330/nextjs-resume"
                 className="text-foreground/80 hover:text-primary transition-colors duration-300"
               >
                 <Github size={24} />
@@ -114,7 +114,7 @@ const ProjectsSection = () => {
                 <ExternalLink size={24} />
               </Link>
               <Link
-                href="#"
+                href="https://github.com/ZZi0330/nextjs-resume"
                 className="text-foreground/80 hover:text-primary transition-colors duration-300"
               >
                 <Github size={24} />
@@ -166,7 +166,7 @@ const ProjectsSection = () => {
                 <ExternalLink size={24} />
               </Link>
               <Link
-                href="#"
+                href="https://github.com/ZZi0330/nextjs-resume"
                 className="text-foreground/80 hover:text-primary transition-colors duration-300"
               >
                 <Github size={24} />
