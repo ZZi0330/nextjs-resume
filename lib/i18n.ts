@@ -2,6 +2,8 @@
  * 多语言翻译配置
  * 包含中文(zh)和英文(en)的所有文本翻译
  */
+
+
 export const translations = {
   zh: {
     // 导航栏

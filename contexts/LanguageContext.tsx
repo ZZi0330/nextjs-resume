@@ -10,6 +10,7 @@ interface LanguageContextType {
   t: (key: string) => string;
 }
 
+
 // 创建语言上下文
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
@@ -44,15 +45,18 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   // 翻译函数 - 根据键值获取对应语言的文本
   const t = (key: string): string => {
     const keys = key.split('.');
+
     let value: unknown = translations[language];
 
-    // 逐级访问嵌套对象
     for (const k of keys) {
-      value = value?.[k];
+      if (value && typeof value === 'object' && value !== null && k in value) {
+        value = (value as Record<string, unknown>)[k];
+      } else {
+        return key; // 某级不存在时直接返回原始 key
+      }
     }
 
-    // 返回翻译文本或原键值（如果未找到翻译）
-    return (typeof value === 'string' ? value : key);
+    return typeof value === 'string' ? value : key;
   };
 
   return (
