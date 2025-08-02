@@ -210,8 +210,8 @@ export const translations = {
     // 英雄区域
     hero: {
       greeting: "你好，我是",
-      name: "孙",
-      lastName: "仙芝",
+      name: "芝芝",
+      lastName: "",
       description: "我使用现代技术创建出色的网页。专注于前端开发，构建既美观又实用的界面。",
       viewWork: "查看我的作品"
     },
@@ -267,7 +267,12 @@ export const translations = {
       namePlaceholder: "您的姓名...",
       emailPlaceholder: "john@gmail.com",
       messagePlaceholder: "您好，我想聊聊关于...",
-      send: "发送"
+      send: "发送",
+      // Toast 消息
+      toast: {
+        success: "✅ 信息发送成功！",
+        error: "❌ 信息发送失败，请稍后重试。"
+      }
     }
   },
   en: {
@@ -477,8 +482,8 @@ export const translations = {
     // Hero Section
     hero: {
       greeting: "Hi, I'm",
-      name: "Ruby", // Kept "Ruby" as it was in the original `en`
-      lastName: "Sun", // Kept "Sun" as it was in the original `en`
+      name: "Revy", // Kept "Ruby" as it was in the original `en`
+      lastName: "", // Kept "Sun" as it was in the original `en`
       description: "I create stellar web experiences with modern technologies. Specializing in front-end development, I build interfaces that are both beautiful and functional.",
       viewWork: "View My Work"
     },
@@ -534,7 +539,12 @@ export const translations = {
       namePlaceholder: "Your Name...",
       emailPlaceholder: "john@gmail.com",
       messagePlaceholder: "Hello, I'd like to talk about...",
-      send: "Send"
+      send: "Send",
+      // Toast messages
+      toast: {
+        success: "✅ Message sent successfully!",
+        error: "❌ Failed to send message, please try again later."
+      }
     }
   }
 };

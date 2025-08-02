@@ -6,22 +6,22 @@ import { useLanguage } from '@/contexts/LanguageContext';
 
 // 技能数据配置
 const skills = [
-  { name: "HTML/CSS", level: 85, category: "frontend" },
+  { name: "HTML/CSS", level: 80, category: "frontend" },
   { name: "JavaScript", level: 70, category: "frontend" },
   { name: "TypeScript", level: 50, category: "frontend" },
-  { name: "React", level: 80, category: "frontend" },
-  { name: "Next.js", level: 60, category: "frontend" },
-  { name: "Tailwind CSS", level: 75, category: "frontend" },
+  { name: "React", level: 75, category: "frontend" },
+  { name: "Next.js", level: 55, category: "frontend" },
+  { name: "Tailwind CSS", level: 70, category: "frontend" },
 
-  { name: "Node.js", level: 50, category: "backend" },
+  { name: "Node.js", level: 45, category: "backend" },
   { name: "Convex", level: 50, category: "backend" },
   { name: "Python", level: 30, category: "backend" },
 
   { name: "React Native", level: 60, category: "mobile" },
-  { name: "Expo", level: 60, category: "mobile" },
+  { name: "Expo", level: 55, category: "mobile" },
 
-  { name: "Git/GitHub", level: 70, category: "tools" },
-  { name: "VS Code", level: 85, category: "tools" },
+  { name: "Git/GitHub", level: 65, category: "tools" },
+  { name: "VS Code", level: 80, category: "tools" },
   { name: "Figma",  level: 30, category: "tools" }
 ];
 

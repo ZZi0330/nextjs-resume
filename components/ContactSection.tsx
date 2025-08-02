@@ -9,35 +9,35 @@ import { useLanguage } from '@/contexts/LanguageContext';
  * 联系我区域组件 - 展示联系信息和联系表单
  */
 const ContactSection = () => {
- // 多语言翻译函数
- const { t } = useLanguage();
- 
- // 处理表单提交
- const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-   e.preventDefault();
+  // 多语言翻译函数
+  const { t } = useLanguage();
 
-   // 获取表单数据
-   const form = e.currentTarget;
-   const name = (form.elements.namedItem("name") as HTMLInputElement).value;
-   const email = (form.elements.namedItem("email") as HTMLInputElement).value;
-   const message = (form.elements.namedItem("message") as HTMLTextAreaElement)
-     .value;
+  // 处理表单提交
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-   // 发送邮件请求
-   const res = await fetch("/api/contact", {
-     method: "POST",
-     headers: { "Content-Type": "application/json" },
-     body: JSON.stringify({ name, email, message }),
-   });
+    // 获取表单数据
+    const form = e.currentTarget;
+    const name = (form.elements.namedItem("name") as HTMLInputElement).value;
+    const email = (form.elements.namedItem("email") as HTMLInputElement).value;
+    const message = (form.elements.namedItem("message") as HTMLTextAreaElement)
+      .value;
 
-   // 处理响应结果
-   if (res.ok) { 
-     toast.success("✅ 信息发送成功！");
-     form.reset(); 
-   } else {
-     toast.error("❌ 信息发送失败，请稍后重试。");
-   }
- };
+    // 发送邮件请求
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, message }),
+    });
+
+    // 处理响应结果
+    if (res.ok) {
+      toast.success(t('contact.toast.success'));
+      form.reset();
+    } else {
+      toast.error(t('contact.toast.error'));
+    }
+  };
 
   return (
     <section id="contact" className="py-24 px-4 relative">

@@ -11,9 +11,9 @@ export async function POST(req: Request) {
   }
 
   const transporter = nodemailer.createTransport({
-    host: process.env.EMAIL_HOST, 
-    port: Number(process.env.EMAIL_PORT), 
-    secure: process.env.EMAIL_SECURE === 'true', 
+    host: process.env.EMAIL_HOST,
+    port: Number(process.env.EMAIL_PORT),
+    secure: process.env.EMAIL_SECURE === 'true',
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS,
@@ -21,8 +21,8 @@ export async function POST(req: Request) {
   });
 
   const mailOptions = {
-    from: `"${name}" <${process.env.EMAIL_USER}>`, 
-    to: process.env.MAIL_TO || process.env.EMAIL_USER, 
+    from: `"${name}" <${process.env.EMAIL_USER}>`,
+    to: process.env.MAIL_TO || process.env.EMAIL_USER,
     subject: `📩 来自 ${name} 的联系表单消息`,
     text: `
       名称: ${name}
